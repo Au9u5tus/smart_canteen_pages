@@ -6,15 +6,15 @@ Vue.use(VueRouter)
 const routes=[
     {
         path:'/',
-        redirect:'/introduce'
+        redirect:'/index'
     },
     {
-        path:'/introduce',
-        component:()=>import('@/components/birthday/Introduce')
+        path:'/register',
+        component:()=>import('@/components/Register')
     },
     {
-        path:'/control',
-        component:()=>import('@/components/Controller')
+        path:'/index',
+        component:()=>import('@/components/Index')
     }
 
 ]

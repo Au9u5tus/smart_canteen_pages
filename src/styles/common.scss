@@ -63,7 +63,7 @@
   height: 100%;
   flex-wrap: wrap;
   overflow: hidden;
-  background: url("~@/assets/images/boy.jpg")0 0/100% 100% no-repeat;
+  //background: url("~@/assets/images/boy.jpg")0 0/100% 100% no-repeat;
   .brick{
     width: 2vw;
     height: 2vw;
@@ -100,7 +100,7 @@
     .pic-bar{
       display: inline-block;
       width: 100%;
-      background: url('~@/assets/images/1.jpg') 0 0/var(--w) var(--h);
+      //background: url('~@/assets/images/1.jpg') 0 0/var(--w) var(--h);
       //background-size: 100% 2px;
       position: absolute;
       //background: #fff;
