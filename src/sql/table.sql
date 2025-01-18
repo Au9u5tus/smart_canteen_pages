@@ -67,3 +67,23 @@ CREATE TABLE delivery (
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
     FOREIGN KEY (delivery_person_id) REFERENCES delivery_persons(person_id)
 );
+
+CREATE TABLE evaluation (
+    evaluation_id INT AUTO_INCREMENT PRIMARY KEY COMMENT '评价的唯一标识符，作为主键',
+    menu_id INT NOT NULL COMMENT '菜单的唯一标识符，关联菜单表的 menu_id，用于标识该评价针对哪个菜品',
+    user_id INT NOT NULL COMMENT '用户的唯一标识符，关联用户表的 user_id，用于标识该评价由哪个用户做出',
+    rating INT NOT NULL COMMENT '评分，使用整数表示，可根据具体的评分范围设定，例如 1 到 5 分',
+    comment TEXT COMMENT '用户的评论内容，可存储较长的文本，用户可对菜品和服务进行评价',
+    evaluation_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '评价时间，记录用户提交评价的时间，默认为当前时间戳',
+    FOREIGN KEY (menu_id) REFERENCES menu(menu_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+CREATE TABLE likes (
+    like_id INT AUTO_INCREMENT PRIMARY KEY COMMENT '点赞的唯一标识符，作为主键',
+    user_id INT NOT NULL COMMENT '用户的唯一标识符，关联用户表的 user_id，用于标识点赞的用户',
+    menu_id INT NOT NULL COMMENT '菜单的唯一标识符，关联菜单表的 menu_id，用于标识被点赞的菜品',
+    liked_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '点赞时间，记录用户点赞的时间，默认为当前时间戳',
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (menu_id) REFERENCES menu(menu_id)
+);
