@@ -13,6 +13,14 @@ const routes=[
         component:()=>import('@/components/Register')
     },
     {
+        path: '/user/list',
+        component:()=>import('@/components/user/List')
+    },
+    {
+        path: '/menu/list',
+        component:()=>import('@/components/menu/List')
+    },
+    {
         path:'/index',
         component:()=>import('@/components/Index')
     }

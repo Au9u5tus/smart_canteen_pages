@@ -27,9 +27,7 @@
                 <el-input v-model="form.email"></el-input>
             </el-form-item>
             <el-form-item label="头像" prop="avatar">
-                <el-upload
-                        class="upload-demo"
-                        action="/your-upload-url"
+                <el-upload class="upload-demo" action="/your-upload-url"
                 :show-file-list="false"
                 :on-success="handleAvatarSuccess"
                 :before-upload="beforeAvatarUpload"
