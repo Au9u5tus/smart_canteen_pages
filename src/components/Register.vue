@@ -28,7 +28,7 @@
             </el-form-item>
             <el-form-item label="头像" prop="avatar">
                 <el-upload
-                        class="avatar-uploader"
+                        class="upload-demo"
                         action="/your-upload-url"
                 :show-file-list="false"
                 :on-success="handleAvatarSuccess"
