@@ -1,14 +1,12 @@
 <template>
-    <div class="container">
-        HELLO WORLD
-    </div>
+    <div class="menu-container"></div>
 </template>
 
 <script>
     export default {
-        name: "Index",
+        name: "Menu",
         mounted() {
-
+            //this.$router.push({name:'orderList'})
         },
         data() {
             return {}

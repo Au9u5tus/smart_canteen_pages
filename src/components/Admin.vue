@@ -1,0 +1,33 @@
+<template>
+    <div class="admin-container" style="height: 100%">
+        <Header></Header>
+        <Menu></Menu>
+        <div class="admin-content"><router-view></router-view></div>
+    </div>
+</template>
+
+<script>
+    import Header from "@/components/layout/Header";
+    import Menu from "@/components/layout/Menu";
+    export default {
+        name: "Index",
+        components:{
+            Menu,
+            Header
+        },
+        mounted() {
+
+
+        },
+        data() {
+            return {}
+        },
+        methods: {
+
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>

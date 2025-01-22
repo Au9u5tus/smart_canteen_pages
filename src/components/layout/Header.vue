@@ -1,12 +1,12 @@
 <template>
-    <div class="container">
-
+    <div class="header-container">
+            23123123
     </div>
 </template>
 
 <script>
     export default {
-        name: "Login",
+        name: "Header",
         mounted() {
 
         },
@@ -14,7 +14,9 @@
             return {}
         },
         methods: {
-
+            jumpPage(){
+                this.$router.push({name:'register'})
+            }
         }
     }
 </script>

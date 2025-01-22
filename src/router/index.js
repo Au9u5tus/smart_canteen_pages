@@ -6,23 +6,42 @@ Vue.use(VueRouter)
 const routes=[
     {
         path:'/',
-        redirect:'/index'
+        redirect:'/index',
     },
     {
         path:'/register',
-        component:()=>import('@/components/Register')
+        component:()=>import('@/components/login/Register')
     },
-    {
-        path: '/user/list',
-        component:()=>import('@/components/user/List')
-    },
+    // {
+    //     name:'userList',
+    //     path: '/user/list',
+    //     component:()=>import('@/components/user/List')
+    // },
     {
         path: '/menu/list',
         component:()=>import('@/components/menu/List')
     },
     {
         path:'/index',
-        component:()=>import('@/components/Index')
+        component:()=>import('@/components/Admin'),
+        //redirect:'orderList',
+        children:[
+            {
+                name:'userList',
+                path: '',
+                component:()=>import('@/components/user/List')
+            },
+            {
+              name:'orderList',
+              path: '/order/list',
+              component:()=>import('@/components/order/List')
+            },
+            {
+                name:'register',
+                path:'/register',
+                component:()=>import('@/components/login/Register')
+            }
+        ]
     }
 
 ]
