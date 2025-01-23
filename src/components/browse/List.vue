@@ -6,7 +6,7 @@
     export default {
         name: "List",
         mounted() {
-
+          console.log(1);
         },
         data() {
             return {}
