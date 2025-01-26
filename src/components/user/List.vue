@@ -29,9 +29,9 @@
         <!-- 添加用户对话框 -->
         <el-dialog :visible.sync="addUserDialogVisible" title="添加用户" width="30%">
             <el-form :model="newUser" :rules="rules" ref="addUserForm" label-width="120px">
-                <el-form-item label="学生学号/职工编号" prop="student_id">
-                    <el-input v-model="newUser.student_id"></el-input>
-                </el-form-item>
+<!--                <el-form-item label="学生学号/职工编号" prop="student_id">-->
+<!--                    <el-input v-model="newUser.student_id"></el-input>-->
+<!--                </el-form-item>-->
                 <el-form-item label="用户名" prop="username">
                     <el-input v-model="newUser.username"></el-input>
                 </el-form-item>
