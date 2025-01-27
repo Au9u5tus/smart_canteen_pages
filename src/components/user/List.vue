@@ -33,23 +33,23 @@
 <!--                    <el-input v-model="newUser.student_id"></el-input>-->
 <!--                </el-form-item>-->
                 <el-form-item label="用户名" prop="username">
-                    <el-input v-model="newUser.username"></el-input>
+                    <el-input v-model="newUser.username" size="mini"></el-input>
                 </el-form-item>
                 <el-form-item label="密码" prop="password">
-                    <el-input type="password" v-model="newUser.password"></el-input>
+                    <el-input type="password" v-model="newUser.password" size="mini"></el-input>
                 </el-form-item>
                 <el-form-item label="姓名" prop="name">
-                    <el-input v-model="newUser.name"></el-input>
+                    <el-input v-model="newUser.name" size="mini"></el-input>
                 </el-form-item>
                 <el-form-item label="性别" prop="gender">
-                    <el-select v-model="newUser.gender">
+                    <el-select v-model="newUser.gender" size="mini">
                         <el-option label="男" value="男"></el-option>
                         <el-option label="女" value="女"></el-option>
                         <el-option label="其他" value="其他"></el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item label="电话" prop="phone">
-                    <el-input v-model="newUser.phone"></el-input>
+                    <el-input v-model="newUser.phone" size="mini"></el-input>
                 </el-form-item>
                 <el-form-item label="邮箱" prop="email">
                     <el-input v-model="newUser.email"></el-input>

@@ -4,6 +4,7 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/styles/common.scss'
+import '@/styles/element-common.scss'
 import axios from 'axios'
 import echarts from 'echarts'
 Vue.config.productionTip = false
