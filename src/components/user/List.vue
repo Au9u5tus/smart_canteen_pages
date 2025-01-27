@@ -52,10 +52,10 @@
                     <el-input v-model="newUser.phone" size="mini"></el-input>
                 </el-form-item>
                 <el-form-item label="邮箱" prop="email">
-                    <el-input v-model="newUser.email"></el-input>
+                    <el-input v-model="newUser.email" size="mini"></el-input>
                 </el-form-item>
                 <el-form-item label="头像" prop="avatar">
-                    <el-input v-model="newUser.avatar"></el-input>
+                    <el-input v-model="newUser.avatar" size="mini"></el-input>
                 </el-form-item>
 <!--                <el-form-item label="角色" prop="role">-->
 <!--                    <el-select v-model="newUser.role">-->
@@ -64,8 +64,8 @@
 <!--                    </el-select>-->
 <!--                </el-form-item>-->
                 <el-form-item>
-                    <el-button type="primary" @click="submitAddUser">添加</el-button>
-                    <el-button @click="addUserDialogVisible = false">取消</el-button>
+                    <el-button type="primary" size="mini" @click="submitAddUser">添加</el-button>
+                    <el-button @click="addUserDialogVisible = false" size="mini">取消</el-button>
                 </el-form-item>
             </el-form>
         </el-dialog>
