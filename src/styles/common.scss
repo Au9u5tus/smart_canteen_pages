@@ -18,3 +18,17 @@
   left: 100px;
   top: 60px;
 }
+.user-management-container{
+  height: 100%;
+  padding: 10px;
+}
+
+.full-screen{
+  height: calc(100% - 28px);
+  .el-table__header-wrapper{
+    height: 50px;
+  }
+  .el-table__body-wrapper{
+   height: calc(100% - 50px);
+  }
+}

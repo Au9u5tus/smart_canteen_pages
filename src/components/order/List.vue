@@ -1,6 +1,6 @@
 <template>
     <div class="order-management-container">
-        <el-button type="primary" @click="openAddOrderDialog">添加订单</el-button>
+        <el-button type="primary" size="mini" @click="openAddOrderDialog">添加订单</el-button>
         <el-table :data="orders" style="width: 100%">
             <el-table-column prop="order_id" label="订单 ID" width="100"></el-table-column>
             <el-table-column prop="user_id" label="用户 ID" width="100"></el-table-column>

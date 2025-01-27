@@ -1,9 +1,9 @@
 <template>
     <div class="user-management-container">
-        <el-button type="primary" @click="openAddUserDialog">添加用户</el-button>
-        <el-table :data="users" style="width: 100%">
+        <el-button type="primary" size="mini" @click="openAddUserDialog">添加用户</el-button>
+        <el-table :data="users" style="width: 100%" class="full-screen">
             <el-table-column prop="user_id" label="用户 ID" width="100"></el-table-column>
-            <el-table-column prop="student_id" label="学生学号/职工编号" width="150"></el-table-column>
+            <el-table-column prop="student_id" label="学生学号" width="150"></el-table-column>
             <el-table-column prop="username" label="用户名" width="150"></el-table-column>
             <el-table-column prop="name" label="姓名" width="150"></el-table-column>
             <el-table-column prop="gender" label="性别" width="100"></el-table-column>
@@ -57,12 +57,12 @@
                 <el-form-item label="头像" prop="avatar">
                     <el-input v-model="newUser.avatar"></el-input>
                 </el-form-item>
-                <el-form-item label="角色" prop="role">
-                    <el-select v-model="newUser.role">
-                        <el-option label="学生" value="学生"></el-option>
-                        <el-option label="食堂管理员" value="食堂管理员"></el-option>
-                    </el-select>
-                </el-form-item>
+<!--                <el-form-item label="角色" prop="role">-->
+<!--                    <el-select v-model="newUser.role">-->
+<!--                        <el-option label="学生" value="学生"></el-option>-->
+<!--                        <el-option label="食堂管理员" value="食堂管理员"></el-option>-->
+<!--                    </el-select>-->
+<!--                </el-form-item>-->
                 <el-form-item>
                     <el-button type="primary" @click="submitAddUser">添加</el-button>
                     <el-button @click="addUserDialogVisible = false">取消</el-button>
@@ -280,7 +280,7 @@
 </script>
 
 <style scoped>
-    .user-management-container {
-        padding: 20px;
-    }
+    /*.user-management-container {*/
+    /*    padding: 20px;*/
+    /*}*/
 </style>
