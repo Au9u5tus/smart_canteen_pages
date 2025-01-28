@@ -1,51 +1,51 @@
 <template>
-    <div class="register-container" :style="{ backgroundColor: background }">
-        <el-form :model="form" :rules="rules" ref="form" label-width="120px">
-            <el-form-item label="学生学号/职工编号" prop="student_id">
-                <el-input v-model="form.student_id"></el-input>
+    <div class="register-container">
+        <el-form :model="form" :rules="rules" ref="form" label-width="80px">
+            <el-form-item label="学号" prop="student_id" >
+                <el-input v-model="form.student_id" size="mini"></el-input>
             </el-form-item>
             <el-form-item label="用户名" prop="username">
-                <el-input v-model="form.username"></el-input>
+                <el-input v-model="form.username" size="mini"></el-input>
             </el-form-item>
             <el-form-item label="密码" prop="password">
-                <el-input type="password" v-model="form.password"></el-input>
+                <el-input type="password" v-model="form.password" size="mini"></el-input>
             </el-form-item>
             <el-form-item label="姓名" prop="name">
-                <el-input v-model="form.name"></el-input>
+                <el-input v-model="form.name" size="mini"></el-input>
             </el-form-item>
             <el-form-item label="性别" prop="gender">
-                <el-select v-model="form.gender">
+                <el-select v-model="form.gender" size="mini">
                     <el-option label="男" value="男"></el-option>
                     <el-option label="女" value="女"></el-option>
                     <el-option label="其他" value="其他"></el-option>
                 </el-select>
             </el-form-item>
             <el-form-item label="电话" prop="phone">
-                <el-input v-model="form.phone"></el-input>
+                <el-input v-model="form.phone" size="mini"></el-input>
             </el-form-item>
             <el-form-item label="邮箱" prop="email">
-                <el-input v-model="form.email"></el-input>
+                <el-input v-model="form.email" size="mini"></el-input>
             </el-form-item>
             <el-form-item label="头像" prop="avatar">
-                <el-upload class="upload-demo" action="/your-upload-url"
-                :show-file-list="false"
-                :on-success="handleAvatarSuccess"
-                :before-upload="beforeAvatarUpload"
-                >
-                <img v-if="form.avatar" :src="form.avatar" class="avatar">
-                <i v-else class="el-icon-plus avatar-uploader-icon"></i>
-                </el-upload>
+<!--                <el-upload class="upload-demo" action="/your-upload-url"-->
+<!--                :show-file-list="false"-->
+<!--                :on-success="handleAvatarSuccess"-->
+<!--                :before-upload="beforeAvatarUpload"-->
+<!--                >-->
+<!--                <img v-if="form.avatar" :src="form.avatar" class="avatar">-->
+<!--                <i v-else class="el-icon-plus avatar-uploader-icon"></i>-->
+<!--                </el-upload>-->
             </el-form-item>
-            <el-form-item label="用户角色" prop="role">
-                <el-select v-model="form.role">
-                    <el-option label="学生" value="学生"></el-option>
-                    <el-option label="食堂管理员" value="食堂管理员"></el-option>
-                </el-select>
-            </el-form-item>
-            <el-form-item>
-                <el-button type="primary" @click="submitForm('form')">注册</el-button>
-                <el-button @click="resetForm('form')">重置</el-button>
-            </el-form-item>
+<!--            <el-form-item label="用户角色" prop="role">-->
+<!--                <el-select v-model="form.role">-->
+<!--                    <el-option label="学生" value="学生"></el-option>-->
+<!--                    <el-option label="食堂管理员" value="食堂管理员"></el-option>-->
+<!--                </el-select>-->
+<!--            </el-form-item>-->
+            <div class="btn-form-item">
+                <el-button type="primary" @click="submitForm('form')" size="mini">注册</el-button>
+                <el-button @click="resetForm('form')" size="mini">重置</el-button>
+            </div>
         </el-form>
     </div>
 </template>
@@ -133,10 +133,7 @@
 </script>
 
 <style scoped>
-    .register-container {
-        padding: 20px;
-        min-height: 100vh; /* 确保背景色铺满整个视口高度 */
-    }
+
     .avatar-uploader.el-upload {
         border: 1px dashed #d9d9d9;
         border-radius: 6px;

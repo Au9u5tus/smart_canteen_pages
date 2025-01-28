@@ -1,8 +1,116 @@
+/**登录页面样式**/
+.login-container{
+  background: url("@/assets/login_bg.jpg") center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .el-select{
+    width: 100%;
+  }
+  .el-form-item__error{
+    top: 85%;
+  }
+  .el-form-item__label{
+    letter-spacing: 0.5em;
+  }
+  .el-form-item:first-child .el-form-item__label{
+    letter-spacing:0;
+  }
 
+}
+/**注册页面样式**/
+.register-container {
+  padding: 10px;
+  max-height: 60vh; /* 确保背景色铺满整个视口高度 */
+  .el-form-item {
+    margin-bottom: 10px;
+
+    .el-form-item__label {
+      letter-spacing: 0.5em;
+    }
+
+    &:nth-child(2) .el-form-item__label {
+      letter-spacing: 0;
+    }
+  }
+  .btn-form-item{
+    text-align: center;
+  }
+}
+.user-page-container{
+  height: 100vh;
+  .carousel-block{
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 0;
+  }
+  .tabs{
+    display: flex;
+    .tab{
+      color: #ffffff;
+      padding: 0 20px;
+      cursor: pointer;
+      &.active{
+        font-weight: bold;
+        background-color: #0d910d;
+      }
+    }
+  }
+}
 .header-container{
   width: 100%;
-  height: 7vh;
-  background: red;
+  height: 60px;
+  line-height: 60px;
+  background: #06ab06;
+  position: relative;
+  display: flex;
+  .header-left{
+    display: flex;
+    width: 350px;
+    align-items: center;
+    margin-left: 30px;
+
+    .system-logo{
+      width: 30px;
+      height: 30px;
+      background: url('@/assets/system_logo.jpg') center center/cover no-repeat;
+      border-radius: 50%;
+    }
+    .system-title{
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+  .header-center {
+    flex: 1;
+  }
+  .header-right{
+     width: 200px;
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     padding: 0 20px;
+      .avatar{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    .drop-downs{
+      margin-left: 10px;
+      cursor: pointer;
+      .el-dropdown{
+        .el-dropdown-link{
+          color: white;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
 }
 .menu-container{
   width: 5vw;

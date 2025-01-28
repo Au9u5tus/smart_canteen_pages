@@ -1,5 +1,5 @@
 <template>
-    <div class="admin-container" style="height: 100%">
+    <div class="admin-page-container" style="height: 100%">
         <Header></Header>
         <Menu></Menu>
         <div class="admin-content"><router-view></router-view></div>

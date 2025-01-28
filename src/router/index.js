@@ -6,11 +6,25 @@ Vue.use(VueRouter)
 const routes=[
     {
         path:'/',
-        redirect:'/index',
+        redirect:'/login',
     },
     {
         path:'/register',
         component:()=>import('@/components/login/Register')
+    },
+    {
+        path: '/adminPage',
+        component:()=>import('@/components/AdminPage'),
+        meta: { requiresAuth: true, roles: ['admin'] }
+    },
+    {
+        path: '/userPage',
+        component:()=>import('@/components/UserPage'),
+        meta: { requiresAuth: true, roles: ['user'] }
+    },
+    {
+        path:'/login',
+        component:()=>import('@/components/login/Login')
     },
     // {
     //     name:'userList',
@@ -23,13 +37,14 @@ const routes=[
     },
     {
         path:'/index',
-        component:()=>import('@/components/Admin'),
+        component:()=>import('@/components/AdminPage'),
         //redirect:'orderList',
         children:[
             {
-                name:'userList',
+                name:'user',
                 path: '',
-                component:()=>import('@/components/user/List')
+                component:()=>import('@/components/UserPage'),
+
             },
             {
               name:'orderList',
