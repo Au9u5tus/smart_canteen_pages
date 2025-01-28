@@ -20,7 +20,15 @@ const routes=[
     {
         path: '/userPage',
         component:()=>import('@/components/UserPage'),
-        meta: { requiresAuth: true, roles: ['user'] }
+        meta: { requiresAuth: true, roles: ['user'] },
+        children:[
+            {
+                name:'userMenu',
+                path: '',
+                component:()=>import('@/components/menu/UserMenu'),
+
+            }
+        ]
     },
     {
         path:'/login',

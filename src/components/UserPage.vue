@@ -9,7 +9,7 @@
     <template #drop>
         <el-dropdown>
            <span class="el-dropdown-link">
-              张三<i class="el-icon-arrow-down el-icon--right"></i>
+              胡汉三<i class="el-icon-arrow-down el-icon--right"></i>
            </span>
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item>个人信息</el-dropdown-item>
@@ -20,13 +20,8 @@
         </el-dropdown>
     </template>
   </Header>
-  <div class="carousel-block">
-    <el-carousel :interval="3000"  type="card" height="200px">
-      <el-carousel-item v-for="(item,index) in imageList" :key="index">
-        <img :src="item" alt="" style="width: 100%; height: 100%; object-fit:cover;"/>
-      </el-carousel-item>
-    </el-carousel>
-  </div>
+  <router-view></router-view>
+
 </div>
 </template>
 
@@ -40,16 +35,11 @@ export default {
   data(){
     return {
       activeIndex:1,
-      imageList:[
-        require('@/assets/carousel_1.jpg'),
-        require('@/assets/carousel_2.jpg'),
-        require('@/assets/carousel_3.jpg'),
-        require('@/assets/carousel_4.jpg')
-      ],
+
       tabList:[
-        {name:'首页',index:1},
-        {name:'我的点单',index:2},
-        {name:'我的订单',index:3}
+        {name:'首页',index:1,path:'/index'},
+        {name:'我的点单',index:2,path:'/myorder'},
+        {name:'我的订单',index:3,path:'/myorder'}
       ]
     }
   },
