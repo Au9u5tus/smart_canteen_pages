@@ -169,6 +169,22 @@
     }
 
   }
+  .my-order{
+    display: flex;
+    justify-content: center;
+    .my-order-table{
+      width: 80%;
+      box-shadow: 0 0 10px #0000001a;
+      margin-top: 20px;
+      .my-order-table-title{
+        display: flex;
+        height: 50px;
+        border-bottom: 1px solid rgb(204, 204, 204);
+        align-items: center;
+        padding: 0px 20px;
+      }
+    }
+  }
   .tabs{
     display: flex;
     .tab{

@@ -27,6 +27,16 @@ const routes=[
                 path: '',
                 component:()=>import('@/components/menu/UserMenu'),
 
+            },
+            {
+                name:'myOrder',
+                path: '/myOrder',
+                component:()=>import('@/components/order/MyOrder'),
+            },
+            {
+                name:'userOrder',
+                path: '/userOrder',
+                component:()=>import('@/components/order/UserOrder'),
             }
         ]
     },

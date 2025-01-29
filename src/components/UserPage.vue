@@ -21,7 +21,6 @@
     </template>
   </Header>
   <router-view></router-view>
-
 </div>
 </template>
 
@@ -35,17 +34,20 @@ export default {
   data(){
     return {
       activeIndex:1,
-
       tabList:[
-        {name:'首页',index:1,path:'/index'},
+        {name:'首页',index:1,path:'/userPage'},
         {name:'我的点单',index:2,path:'/myorder'},
-        {name:'我的订单',index:3,path:'/myorder'}
+        {name:'我的订单',index:3,path:'/userOrder'}
       ]
     }
   },
   methods:{
     selectTab(item){
+      if(this.activeIndex==item.index){
+        return;
+      }
       this.activeIndex=item.index;
+      this.$router.push({path:item.path})
     },
     loginOut(){
       localStorage.removeItem('token');
