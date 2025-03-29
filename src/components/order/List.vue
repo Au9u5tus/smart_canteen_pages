@@ -141,7 +141,6 @@
 
 <script>
     import axios from 'axios';
-
     export default {
         data() {
             return {
@@ -195,11 +194,11 @@
         },
         methods: {
             fetchOrders() {
-                axios.get('/api/orders') // 这里需要替换为实际的后端 API 地址
+                //这里需要替换为实际的后端API地址
+                axios.get('/api/orders')
                     .then(response => {
                         this.orders = response.data;
-                    })
-                    .catch(error => {
+                    }).catch(error => {
                         console.error('获取订单信息失败:', error);
                     });
             },
@@ -252,4 +251,4 @@
             }
         }
     }
-    </script>
+</script>

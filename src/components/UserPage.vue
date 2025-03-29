@@ -35,9 +35,9 @@ export default {
     return {
       activeIndex:1,
       tabList:[
-        {name:'首页',index:1,path:'/userPage'},
-        {name:'我的点单',index:2,path:'/myorder'},
-        {name:'我的订单',index:3,path:'/userOrder'}
+        {name:'首页',index:1,path:'/userPage/index'},
+        {name:'我的点单',index:2,path:'/userPage/myorder'},
+        {name:'我的订单',index:3,path:'/userPage/userOrder'}
       ]
     }
   },

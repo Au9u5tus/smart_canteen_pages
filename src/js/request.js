@@ -19,6 +19,11 @@ service.interceptors.request.use(
         // if (token) {
         //     config.headers['Authorization'] = `Bearer ${token}`;
         // }
+        // const newToken = response.headers.get('Authorization');
+        // if (newToken) {
+        //     localStorage.setItem('token', newToken.replace('Bearer ', ''));
+        // }
+        return response.json();
          return config;
     },
     error => {

@@ -2,7 +2,10 @@
     <div class="admin-page-container" style="height: 100%">
         <Header></Header>
         <Menu></Menu>
-        <div class="admin-content"><router-view></router-view></div>
+        <div class="admin-content">
+          <router-view></router-view>
+        </div>
+
     </div>
 </template>
 
@@ -10,7 +13,7 @@
     import Header from "@/components/layout/Header";
     import Menu from "@/components/layout/Menu";
     export default {
-        name: "Index",
+        name: "AdminPage",
         components:{
             Menu,
             Header
@@ -20,7 +23,9 @@
 
         },
         data() {
-            return {}
+            return {
+
+            }
         },
         methods: {
 
